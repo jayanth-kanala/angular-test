@@ -1,0 +1,18 @@
+<h2>Welcome User!, Latest activity</h2>
+<br><br>
+<div ng-repeat="x in names | filter:query | orderBy:orderProp">
+	<ul class="media-list" ng-show="x.actor">
+		<li class="media">
+			<div class="media-left">
+				<a href="{{x.actor.angellist_url}}">
+					<img class="media-object" ng-src="{{x.actor.image}}" alt="...">
+				</a>
+			</div>
+			<div class="media-body">
+				<h1 class="media-heading">{{x.actor.name}}</h1>
+				<h4>{{x.actor.tagline}}</h4>
+			</div>
+		</li>
+	</ul>
+	<br>
+</div>

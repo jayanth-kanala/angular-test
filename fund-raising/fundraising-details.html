@@ -1,0 +1,19 @@
+<h2>Welcome User!, Fund Raising Details</h2>
+<sort-panel></sort-panel>
+<div ng-repeat="x in names | filter:query | orderBy:orderProp">
+	<ul class="media-list">
+		<li class="media">
+			<div class="media-left">
+				<a href="{{x.angellist_url}}">
+					<img class="media-object" ng-src="{{x.thumb_url}}" alt="...">
+				</a>
+			</div>
+			<div class="media-body">
+				<h1 class="media-heading">{{x. name}}</h1>
+				<h4>{{x.product_desc}}</h4>
+				<fundraising-panel></fundraising-panel>
+			</div>
+		</li>
+	</ul>
+	<br>
+</div>
